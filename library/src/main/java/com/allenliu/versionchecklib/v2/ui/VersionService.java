@@ -208,11 +208,11 @@ public class VersionService extends Service {
     private void startDownloadApk() {
         //判断是否缓存并且是否强制重新下载
         final String downloadPath = getDownloadFilePath();
-        if (!builder.isForceRedownload()) {
+        /*if (!builder.isForceRedownload()) {
             ALog.e("using cache");
             install();
             return;
-        }
+        }*/
         builderHelper.checkAndDeleteAPK();
         String downloadUrl = builder.getDownloadUrl();
         if (downloadUrl == null && builder.getVersionBundle() != null) {
